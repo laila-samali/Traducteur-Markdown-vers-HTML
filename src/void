@@ -1,4 +1,19 @@
 
+
+
+## Outils pour le Markdown
+Comme mentionné ci-dessus, tous les éditeurs peuvent être utilisés pour éditer du Markdown. Cependant, il existe quelques outils qui pourraient vous être utiles pour l'édition du Markdown.
+ * **[*Stackedit*](https://stackedit.io)** : Ok, vous pouvez arrêter de lire tout de suite. Cliquez sur le lien et commencez votre visite du markdown de la plus simple des manières. Tapez juste du texte normal et utilisez votre souris, clic clic, c'est fait. Vous n'avez pas besoin de connaître la syntaxe. C'est bien, mais vous en serez dépendant et la plupart des développeurs préfèrent les claviers.
+ * **[*Dillinger*](http://dillinger.io/)** : Outil en ligne, supporte le *live view* (écran partagé) et l'export au format html. Rien de très spécial mais très soigné et pratique.
+ * **[*Typora*](https://www.typora.io/)** : Disponible pour Mac et Windows, minimaliste, sans aucune distraction, *live view* parfait, comprend d'autres choses comme les Images, Listes, Tableaux, Blocs de Code, Blocs de Mathématiques, YAML, Front Matters, Toc, ...
+ * **[*Atom*](https://atom.io/)** : Éditeur de texte populaire (vous l'utilisez peut-être). Ouais, il est polyvalent. Supporte le Markdown ? Ça n'en est qu'une partie et c'est très bien construit.
+ * **[*Minimalist Markdown*](https://chrome.google.com/webstore/detail/minimalist-markdown-edito/pghodfjepegmciihfhdipmimghiakcjf?hl=en)** : App Google Chrome. Fonctionne partout si Chrome est installé (c'est mon préféré).
+ * **[*Macdown*](http://macdown.uranusjr.com/)** : le meilleur pour Mac.
+ * **[*MarkdownPad*](http://markdownpad.com/)** : le meilleur pour Windows.
+ * **[*Remarkable*](https://remarkableapp.github.io/)** : le meilleur pour Linux.
+ * **[*GITBOOK*](http://www.gitbook.com/)** : GitBook est un outil de publication moderne qui simplifie la rédaction et la collaboration. Il supporte le Markdown et entretient une relation proche avec notre bien-aimé Github.
+<div id='syntax'/>
+
 ## La syntaxe du Markdown
 Toute la syntaxe peut être trouvée [ici](https://daringfireball.net/projects/markdown/syntax) . Il faudrait beaucoup d'efforts pour retranscrire la syntaxe en texte (ils seraient formatés). Jetez donc un oeil au tableau ci-dessous pour toute la syntaxe de base.
 

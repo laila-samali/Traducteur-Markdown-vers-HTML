@@ -18,23 +18,29 @@ public class ConvertMarkdown {
         //Cas text en gras
 
         // Cas 3
-        String markdown3 = "## Titre **lpmi**";
+        String markdown3 = "## Titre **lpmi tt**";
        System.out.println(boldMarkdownToHTML(markdown3));
         //System.out.println(titleMarkdownToHTML(markdown3));
 
         //CAs 4
-        String markdown4 = "## Titre ****";
-   //     System.out.println(boldMarkdownToHTML(markdown4));
+        String markdown4 = "## Titre *********";
+        System.out.println(boldMarkdownToHTML(markdown4));
    //     System.out.println(titleMarkdownToHTML(markdown4));
 
         //Cas 5
         String markdown5 = "## Titre ***";
-    //    System.out.println(boldMarkdownToHTML(markdown5));
+       System.out.println(boldMarkdownToHTML(markdown5));
      //   System.out.println(titleMarkdownToHTML(markdown5));
 
         //Cas 6
         String markdown6 = "## Titre **";
-       // System.out.println(boldMarkdownToHTML(markdown6));
+        System.out.println(boldMarkdownToHTML(markdown6));
+        //System.out.println(titleMarkdownToHTML(markdown6));
+
+        //Cas 7 :: deux iteration
+        String markdown7 = "## Titre **lmpi****pro**";
+        String test7 = boldMarkdownToHTML(markdown7);
+        System.out.println(boldMarkdownToHTML(test7));
         //System.out.println(titleMarkdownToHTML(markdown6));
     }
 
@@ -94,7 +100,7 @@ public class ConvertMarkdown {
         if (!boldMarkdown.isEmpty()) {
             boldMarkdown = boldMarkdown.substring(2, boldMarkdown.length() - 2);
             // Crée la balise HTML pour le texte en gras
-             String boldHtml = "<strong>" + boldMarkdown + "</strong>"
+             String boldHtml = "<strong>" + boldMarkdown + "</strong>";
             // Remplace la balise Markdown par HTML
             markdown = markdown.replaceFirst("\\*\\*"+boldMarkdown+"\\*\\*", boldHtml);
         }

@@ -32,13 +32,18 @@ public class Main {
             String ligne;
             System.out.println("les titres");
             while ((ligne = br.readLine()) != null) {
+                while(DetectMarkdown.isBold(ligne)){
+                    System.out.println(ConvertMarkdown.boldMarkdownToHTML(ligne));
+                    ligne = ConvertMarkdown.boldMarkdownToHTML(ligne);
+                }
+
                 if (DetectMarkdown.testTitre(ligne)) {
                     System.out.println(ConvertMarkdown.titleMarkdownToHTML(ligne));
-                    contenuBody.add(ConvertMarkdown.titleMarkdownToHTML(ligne));
-                }else{
-                    contenuBody.add(ligne);
-
+                    ligne = ConvertMarkdown.boldMarkdownToHTML(ligne);
                 }
+                contenuBody.add(ligne);
+
+
 
 
             }
