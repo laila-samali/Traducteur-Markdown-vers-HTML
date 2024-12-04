@@ -23,9 +23,13 @@ public class CreerfichierHTML {
         String footer = "</body>\n</html>";
 
         // Créer ou ouvrir le fichier HTML
-        creerFichierHTML(nomFichier, head, contenuBody, footer);
+        creerFichierHTML(contenuBody);
     }
-    public static void creerFichierHTML(String nomFichier, String head, ArrayList<String> contenuBody, String footer) {
+    public static void creerFichierHTML( ArrayList<String> contenuBody) {
+        // Le contenu HTML à écrire dans le fichier
+        String head = "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n\t<meta charset=\"UTF-8\">\n\t<title>Ma Page HTML</title>\n</head>\n<body>\n";
+        // La fermeture de la balise body et html
+        String footer = "</body>\n</html>";
         // Créer ou ouvrir le fichier HTML
         try {
             // Créer un objet File pour le fichier

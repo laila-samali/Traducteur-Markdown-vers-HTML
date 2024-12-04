@@ -3,7 +3,7 @@ import java.io.IOException;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.IOException;
+import java.util.ArrayList;
 
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -15,7 +15,7 @@ public class Main {
 
         //Test existance du fichier
         try {
-            Main.getFileExist(cheminFichier);
+            Main.isExist(cheminFichier);
            // System.out.println("Fichier trouvé : " + fichier.getAbsolutePath());
         } catch ( Exception e){
 
@@ -23,17 +23,26 @@ public class Main {
             return;
         }
 
-
+        ArrayList<String> contenuBody = new ArrayList<>();
 
 
 
         // Utilisation d'un BufferedReader pour lire le fichier
         try (BufferedReader br = new BufferedReader(new FileReader(cheminFichier))) {
             String ligne;
+            System.out.println("les titres");
             while ((ligne = br.readLine()) != null) {
-                System.out.println(ligne);
+                if (DetectMarkdown.testTitre(ligne)) {
+                    System.out.println(ConvertMarkdown.titleMarkdownToHTML(ligne));
+                    contenuBody.add(ConvertMarkdown.titleMarkdownToHTML(ligne));
+                }else{
+                    contenuBody.add(ligne);
+
+                }
+
 
             }
+            CreerfichierHTML.creerFichierHTML(contenuBody);
         } catch (IOException e) {
             System.out.println("Erreur lors de la lecture du fichier : " + e.getMessage());
         }
@@ -42,7 +51,7 @@ public class Main {
 
     }
 
-    public static boolean getFileExist( String cheminFichier ) throws IOException{
+    public static boolean isExist( String cheminFichier ) throws IOException{
         // Créer une instance de File
         File fichier = new File(cheminFichier);
         boolean find = true;
